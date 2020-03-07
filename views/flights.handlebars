@@ -1,0 +1,29 @@
+<h1>Daily Flights: All times are local</h1>
+<p>Airport Codes: SDF is Louisville, MIA is Miami, LAS is Las Vegas</p>
+<table class="table">
+<tr><th>Flight</th><th>Origin</th><th>Destination</th></tr>
+{{#each flightlist}}
+  <tr><td>{{flight}}</td><td>{{origin}}</td><td>{{destination}}</td></tr>
+{{/each}}
+</table>
+<h2>Reservation Form</h2>
+<form method="post" action="handleform">
+<p><input type="text" name="fullname" placeholder="Enter full name"> Enter full name </p>
+<p><input type="text" name="flight" placeholder="Enter flight number" size='35'> Enter Flight Number <br></p>
+
+<p> Seating Preference </p>
+<select name = "seating"> 
+<option name = "coach">Coach</option>
+<option name = "business">Business</option>
+<option name = "firstclass">First Class</option>
+</select></p>
+
+
+<h2>Meal Preference</h2>
+<p><input type="radio" id="beef" name="meal" value="beef"> Beef <br>
+<input type="radio" name="meal" value="chicken"> Chicken <br>
+<input type="radio" name="meal" value="vegan"> Vegan </p>
+
+<p><button type="submit">Submit Form</button></p> 
+
+</form>
